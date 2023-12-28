@@ -1,19 +1,22 @@
 import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import { Link, type HeadFC, type PageProps } from "gatsby"
 import Layout from "../components/layout"
+import { header, btn } from "../styles/home.module.css"
+
 
 
 const IndexPage: React.FC<PageProps> = () => {
 
-  console.log(typeof(Layout))
+
   return (
     <Layout>
-      <main>
-        <h1>
-          Congratulations
-          <br />
-          <span>— you just made a Gatsby site! 🎉🎉🎉</span>
-        </h1>
+      <main className={header}>
+        <div>
+          <h2>Congratulations</h2>
+          <h3>You just made a Gatsby site!</h3>
+          <p>— you just made a Gatsby site! 🎉🎉🎉</p>
+          <Link className={btn} to="/projects">Projects</Link>
+        </div>
       </main>
     </Layout>
   )

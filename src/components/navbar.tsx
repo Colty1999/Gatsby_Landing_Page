@@ -6,9 +6,11 @@ const Navbar: React.FC = () => {
     return (
         <nav>
             <h1>Landing Page</h1>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/projects">Projects</Link>
+            <div className="links">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/projects">Projects</Link>
+            </div>
         </nav>
     );
 };
