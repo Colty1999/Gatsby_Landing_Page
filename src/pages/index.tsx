@@ -1,12 +1,22 @@
 import * as React from "react"
-import { Link, type HeadFC, type PageProps } from "gatsby"
+import { Link, StaticQueryDocument, graphql, type HeadFC, type PageProps } from "gatsby"
 import Layout from "../components/layout"
 import { header, btn } from "../styles/home.module.css"
 
+// interface HeaderProps {
+//   className: string;
+// }
+// interface HeaderPropsWithData extends HeaderProps {
+//   data: {
+//     site: {
+//       siteMetadata: {
+//         title: string,
+//       },
+//     },
+//   };
+// }
 
-
-const IndexPage: React.FC<PageProps> = () => {
-
+const IndexPage = () => {
 
   return (
     <Layout>
@@ -17,6 +27,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <p>— you just made a Gatsby site! 🎉🎉🎉</p>
           <Link className={btn} to="/projects">Projects</Link>
         </div>
+        <img src="/index-photo.jpg" alt="index photo" style={{ maxWidth: "85%" }} />
       </main>
     </Layout>
   )
